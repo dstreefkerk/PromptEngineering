@@ -48,4 +48,4 @@ This prompt instructs the LLM to:
 *   **Avoid unnecessary text:** Returns just the table, nothing else.
 
 Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/54012592/ee66037c-13f8-4172-ab29-b3be7b0d1509/commits.json
+[1] https://api.github.com/repos/SigmaHQ/sigma/commits?path=rules&since=2024-02-21T00:00:00Z&until=2025-02-21T23:59:59Z
