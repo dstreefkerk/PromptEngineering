@@ -1,40 +1,53 @@
-```
+```markdown
+# Sigma Rule Extraction from GitHub Commit History
+
 Deep dive into the provided JSON data, which represents the commit history of a GitHub repository folder. Your mission is to identify and extract details about newly added Sigma rules.
 
-**Input:**
+---
+
+## **Input:**
 
 A JSON file containing a list of commits. Each commit object includes:
 
-*   `sha`: Commit hash.
-*   `commit.message`: Commit message (often includes the rule name and purpose).
-*   `author.login`: Author's GitHub username.
-*   `html_url`: Link to the commit details on GitHub.
+- `sha`: Commit hash.
+- `commit.message`: Commit message (often includes the rule name and purpose).
+- `author.login`: Author's GitHub username.
+- `html_url`: Link to the commit details on GitHub.
 
-**Task:**
+---
 
-1.  **Identify New Rules:** Scan the commit messages for keywords like "new:", "add:", or "Add `[Rule Name]`" to pinpoint commits that introduce new Sigma rules. Be case-insensitive in your search.
+## **Task:**
 
-2.  **Extract Key Information:** For each identified rule, use the `html_url` to access the commit details page on GitHub. Analyse the commit message and, if necessary, the changes within the commit to extract the following:
+### 1. **Identify New Rules:** 
+Scan the commit messages for keywords like `"new:"`, `"add:"`, or `"Add [Rule Name]"` to pinpoint commits that introduce new Sigma rules. Be case-insensitive in your search.
 
-    *   **Rule Name:** The full name of the Sigma rule, as clearly stated in the commit message or rule file (e.g., "Potentially Suspicious WDAC Policy File Creation").
-    *   **Rule Purpose:** A concise description of what the rule detects (e.g., "Detects the creation of potentially suspicious WDAC policy files.").
-    *   **Log Sources Required:** Identify the necessary log sources for the rule to function (e.g., "Windows Event Logs").
-    *   **Applicable Products/Vendors:** Determine which products or vendors the rule is designed for (e.g., "Microsoft Windows").
+### 2. **Extract Key Information:** 
+For each identified rule, use the `html_url` to access the commit details page on GitHub. Analyse the commit message and, if necessary, the changes within the commit to extract the following:
 
-3.  **Output Format:** Organise the extracted information into a table with the following columns:
+- **Rule Name:** The full name of the Sigma rule, as clearly stated in the commit message or rule file (e.g., *"Potentially Suspicious WDAC Policy File Creation"*).
+- **Rule Purpose:** A concise description of what the rule detects (e.g., *"Detects the creation of potentially suspicious WDAC policy files."*).
+- **Log Sources Required:** Identify the necessary log sources for the rule to function (e.g., *"Windows Event Logs"*).
+- **Applicable Products/Vendors:** Determine which products or vendors the rule is designed for (e.g., *"Microsoft Windows"*).
 
-    | Rule Name                                                        | Rule Purpose                                                                                              | Log Sources Required | Applicable Products/Vendors |
-    | :--------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- | :------------------- | :-------------------------- |
-    | (Rule Name)                                                    | (Rule Purpose)                                                                                          | (Log Sources)        | (Products/Vendors)          |
-    | Example: Potentially Suspicious WDAC Policy File Creation      | Detects the creation of potentially suspicious WDAC policy files.                                         | Windows Event Logs     | Microsoft Windows           |
-    | Example: Suspicious Binaries and Scripts in Public Folder | Detects the presence of suspicious binaries and scripts in public folders. | Windows Event Logs     | Microsoft Windows           |
+---
 
-**Instructions:**
+## **Output Format:** 
 
-*   Be thorough in your analysis of each commit, as the required information might be spread across the commit message and file changes.
-*   Prioritise accuracy and clarity in the extracted information.
-*   Use a consistent format for the table.
-*   Handle potential ambiguities or missing information gracefully, noting any assumptions made or gaps in the data.
-*   Do not include any introductory or concluding paragraphs in your response. The output should *only* be the table.
+Organise the extracted information into a table with the following columns:
 
+| **Rule Name**                                                | **Rule Purpose**                                                                                      | **Log Sources Required** | **Applicable Products/Vendors** | **Commit URL**                   |
+| :------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------- | :----------------------- | :------------------------------ | :------------------------------- |
+| (Rule Name)                                                   | (Rule Purpose)                                                                                        | (Log Sources)            | (Products/Vendors)              | (Commit URL)                     |
+| Example: *Potentially Suspicious WDAC Policy File Creation*    | Detects the creation of potentially suspicious WDAC policy files.                                      | *Windows Event Logs*     | *Microsoft Windows*             | `https://github.com/example/commit` |
+| Example: *Suspicious Binaries and Scripts in Public Folder*    | Detects the presence of suspicious binaries and scripts in public folders.                             | *Windows Event Logs*     | *Microsoft Windows*             | `https://github.com/example/commit` |
+
+---
+
+## **Instructions:** 
+
+- Be thorough in your analysis of each commit, as the required information might be spread across the commit message and file changes.
+- Prioritise accuracy and clarity in the extracted information.
+- Use a consistent format for the table.
+- Handle potential ambiguities or missing information gracefully, noting any assumptions made or gaps in the data.
+- Do not include any introductory or concluding paragraphs in your response. The output should *only* be the table.
 ```
