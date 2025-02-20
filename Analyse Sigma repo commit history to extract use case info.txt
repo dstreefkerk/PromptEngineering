@@ -38,14 +38,3 @@ A JSON file containing a list of commits. Each commit object includes:
 *   Do not include any introductory or concluding paragraphs in your response. The output should *only* be the table.
 
 ```
-
-This prompt instructs the LLM to:
-
-*   **Focus on rule addition:** Specifically look for commits that add new rules.
-*   **Extract relevant details:** Identify and extract the rule name, purpose, log sources and applicable products/vendors.
-*   **Follow links:** Use the provided URLs to access the commit page to get more information on the rule.
-*   **Return structured data:** Outputs the data in a well-formatted table.
-*   **Avoid unnecessary text:** Returns just the table, nothing else.
-
-Citations:
-[1] https://api.github.com/repos/SigmaHQ/sigma/commits?path=rules&since=2024-02-21T00:00:00Z&until=2025-02-21T23:59:59Z
