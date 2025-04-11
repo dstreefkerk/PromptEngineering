@@ -35,10 +35,6 @@ This repository is set up as a **template repository**, meaning you can use it t
 
 The repository is organized into subdirectories based on use cases and topics, with a strong emphasis on cybersecurity. Each subdirectory contains markdown files with detailed descriptions and examples of the prompts.
 
-Example structure:
-. ├── threat-analysis/ ├── incident-response/ ├── vulnerability-management/ └── general-llm-prompts/
-
-
 ---
 
 ## 🤝 Contributions
