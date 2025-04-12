@@ -46,6 +46,7 @@ Once I confirm the values from Part 1:
 
 3. **Create a Markdown Artefact:**  
    Generate a single well-structured Markdown document using the filename format above. Present it as an artifact (Claude), in canvas (ChatGpt/Gemini)
+   **This is a hard requirement, not just formatting — do not return it as a code block in the chat.**
 
 ```markdown
 # Lessons Learned: [Title Case Topic]
