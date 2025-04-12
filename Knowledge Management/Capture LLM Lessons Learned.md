@@ -45,10 +45,7 @@ Once I confirm the values from Part 1:
    Format: `[confirmed_category]-[confirmed_topic]-[filename-summary]-[confirmed_date].md`
 
 3. **Create a Markdown Artefact:**  
-   Generate a well-structured Markdown document using the filename format above.
-    - If running in ChatGPT, deliver the output using the canmore.create_textdoc tool so that it opens in Canvas mode.
-    - If running in Claude, present the output as an artifact
-    - **This is a hard requirement, not just formatting — do not return it as a code block in the chat.**
+   Generate a single well-structured Markdown document using the filename format above. Present it as an artifact (Claude), in canvas (ChatGpt/Gemini)
 
 ```markdown
 # Lessons Learned: [Title Case Topic]
