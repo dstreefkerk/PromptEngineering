@@ -41,8 +41,14 @@ Once I confirm the values from Part 1:
 1. **Generate Filename Summary:**  
    Create a concise 4–5 word summary of the key lesson learned (lowercase, hyphenated).
 
-2. **Construct Filename:**  
-   Format: `[confirmed_category]-[confirmed_topic]-[filename-summary]-[confirmed_date].md`
+2. **Construct Filename and Artifact ID:**
+   - Format for filename: `[confirmed_category]-[confirmed_topic]-[filename-summary]-[confirmed_date].md`
+   - Ensure the artifact ID matches the filename exactly (without the .md extension)
+   - Example:
+     - If category is "programming", topic is "python-clr", summary is "type-handling", date is "2025-04-13"
+     - Filename should be: `programming-python-clr-type-handling-2025-04-13.md`
+     - Artifact ID should be: `programming-python-clr-type-handling-2025-04-13`
+   - When creating the artifact, ensure both the ID and title use the identical naming pattern
 
 3. **Create a Markdown Artefact:**  
    Generate a single well-structured Markdown document using the filename format above. Present it as an artifact (Claude), in canvas (ChatGpt/Gemini)
