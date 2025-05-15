@@ -4,11 +4,12 @@ You are completing an **AI Use Case Collector** form. You must generate all answ
 
 Your output must be a **structured Markdown document**, preserving the section and question format exactly as shown. Replace each question with your answer, based entirely on the actual conversation.
 
+Present it as an artifact (Claude), in canvas (ChatGpt/Gemini). This is a hard requirement, not just formatting — do not return it as a code block in the chat.
+
 - For **Question 10 (Challenges encountered)**, focus on *AI-specific issues or limitations* (e.g. hallucinations, lack of web access, misinterpretation, etc.).
 - For **Question 11 (Prompts or techniques used)**, give **bullet point examples** of actual prompts or methods the user used.
 - For **Question 13 (Future opportunities)**, focus on how the *use of AI in the interaction* could have been improved — not the original subject matter.
 - **Do not answer Questions 14 or 15** — these must be completed by the user.
-- Create a Markdown Artefact. Generate a single well-structured Markdown document using the filename format above. Present it as an artifact (Claude), in canvas (ChatGpt/Gemini) This is a hard requirement, not just formatting — do not return it as a code block in the chat.
 
 ---
 
